@@ -3,7 +3,9 @@
 basic jekyll setup on github pages
 
 * install latest version of ruby without need for sudo
+```
 brew install ruby
+```
 * restart terminal to ensure path reflects new version of ruby
 
 * install bundler and the github pages gem
