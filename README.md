@@ -61,5 +61,11 @@ url: "http://mattorama.github.io" # the base hostname & protocol for your site
 
 * commit changes and push to gh-pages branch
 ```
-git commit -am "fix url settings for github"
+git add .
+git commit -m "fix url settings for github"
 git push origin master
+git checkout -b gh-pages
+git rebase master
+git push origin gh-pages
+git checkout master
+```
