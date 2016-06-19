@@ -17,14 +17,3 @@ git remote add upstream https://github.com/mattorama/vernix.git
 git push origin master
 git push --all
 ```
-
-* commit changes and push to gh-pages branch
-```
-git add .
-git commit -m "fix url settings for github"
-git push origin master
-git checkout -b gh-pages
-git rebase master
-git push origin gh-pages
-git checkout master
-```
