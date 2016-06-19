@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "cleaning shop"
-date:   2016-06-18 17:54:55 -0700
+date:   2016-06-18
 categories: setup
 ---
 It's time for a clean start on my MacBook Pro. This post wipes the slate clean and restores a few essentials.
