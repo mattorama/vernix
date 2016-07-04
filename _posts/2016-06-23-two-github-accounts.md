@@ -74,3 +74,5 @@ cd ./work_repo
 git config user.name "workname"
 git config user.email "workname@work.com"
 ```
+
+* verify using ```git remove -v``` in a personal and work repository
