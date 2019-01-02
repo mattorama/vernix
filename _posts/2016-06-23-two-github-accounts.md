@@ -10,15 +10,14 @@ Following on from [git]({{ site.baseurl }}{% post_url 2016-06-20-git %}), let's 
 
 ```
 cd ~/.ssh
-ssh-keygen -t rsa -C "other_username@other.com"
+ssh-keygen -t rsa -C "other_username@other.com" -f "id_rsa_github_workname"
 ```
 
-* enter a new filename, e.g., ```github_other```
 * enter a passphrase
 * add the public key to github
 
 ```
-pbcopy < ~/.ssh/github_workname.pub
+pbcopy < ~/.ssh/id_rsa_github_workname.pub
 ```
 
 * add the ssh key in github personal settings
@@ -32,16 +31,8 @@ eval "$(ssh-agent -s)"
 * add the key and passphrase to the ssh agent
 
 ```
-ssh-add ~/.ssh/github_workname
+ssh-add ~/.ssh/id_rsa_github_workname
 ```
-
-* test the ssh keys for both accounts:
-
-```
-ssh -T git@github.com
-ssh -T git@work.github.com
-```
-
 
 * create a config file at ```~/.ssh/config```:
 
@@ -60,6 +51,15 @@ Host work.github.com
 ```
 * the "normal" identity will remain as the "default"
 
+
+* test the ssh keys for both accounts:
+
+```
+ssh -T git@github.com
+ssh -T git@work.github.com
+```
+
+
 * from GitHub, copy the url for cloning a repo to the clipboard and try to clone it
 * modify the url host to match the host for the work account in the config file:
 
@@ -75,4 +75,4 @@ git config user.name "workname"
 git config user.email "workname@work.com"
 ```
 
-* verify using ```git remove -v``` in a personal and work repository
+* verify using ```git remote -v``` in a personal and work repository
